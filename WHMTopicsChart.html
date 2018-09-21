@@ -50,12 +50,26 @@
           chartOptions = {
 						//legend: { position: 'top', alignment: 'end' }
 						'title':'WHM Visualized',
-                        'width':1600,
-                        'height':800,
+                        'width':1340,
+                        'height':680,
+
+                        chartArea:{
+                            //left:10,
+                            //right:10, // !!! works !!!
+                            //bottom:20,  // !!! works !!!
+                            //top:20,
+                            
+                            top:"25%",
+                            width:"78%",
+                            height:"65%"
+                            
+                        },
+
 						series: series,
-						legend: { position: 'top', maxLines: 6, textStyle: {fontSize: 15} },
+                        legend: { position: 'top', maxLines: 6, 
+                        textStyle: {fontSize: 15} },
                         hAxis: {
-							title: 'Year',
+                            title: 'Year',
 							//Removes comma
 							format: '0'
                         },
@@ -193,12 +207,14 @@
   </head>
 
   <body>
-    <!--Div that will hold the pie chart-->
     
 	<div>
-	<div id="chart_div"></div>
-	<div style="text-align: center;"><input type="button" Value="Clear All" onclick="deselectAll()" style="width:120px;height:70px;font-size:22px; "></div>
-	</div>
+        <div id="chart_div"></div>
+        <div style="text-align: center;"><input type="button" Value="Clear All" onclick="deselectAll()" style="width:120px;height:70px;font-size:22px; "></div>
+    </div>
+    <div>
+        <span style="text-size:small">For more information, <a href="index.html">visit project information page here</a>.</span>
+    </div>
 	
   </body>
 </html>
